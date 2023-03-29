@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/**
+ * * PRIMARY COLORS 
+  */
+/**
+ * * NEUTRAL COLORS 
+  */
+@font-face {
+  font-family: "Fontzinha pika";
+  src: url(./assets/fonts/Ubuntu-Regular.ttf);
+}
+@font-face {
+  font-family: "Fontzinha pika Medium";
+  src: url(./assets/fonts/Ubuntu-Medium.ttf);
+}
+@font-face {
+  font-family: "Fontzinha pika Bold";
+  src: url(./assets/fonts/Ubuntu-Bold.ttf);
+}
+#body, #html {
+  width: 500px;
+  font-size: 16px;
+  font-family: "Fontzinha pika", "san-serif", "Helvetica Neue";
+  background-color: hsl(217, 100%, 97%);
+}
+
+main {
+  width: 80%;
+  margin: auto;
+  margin-top: -60px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  padding: 40px 20px;
+  color: hsl(231, 11%, 63%);
+  box-shadow: 4px 2px 25px hsl(229, 24%, 87%);
+  position: relative;
+}
+main h3 {
+  font-family: "Fontzinha pika Bold", "san-serif", "Helvetica Neue" !important;
+  font-size: 28px !important;
+  padding-bottom: 20px;
+  color: hsl(213, 96%, 18%);
+}
+main label {
+  color: hsl(213, 96%, 18%);
+}
+main ::placeholder {
+  color: hsl(231, 11%, 63%) !important;
+  font-size: 0.9rem;
+}
+main button.btn-submit {
+  background-color: hsl(213, 96%, 18%);
+  color: white;
+  font-size: 12px;
+  border-radius: 3px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-bottom: -100px;
+}
+main button.btn-submit:hover {
+  background-color: #03418c; /* nova função bem legal que eu n sabia q existia   */
+  color: hsl(0, 0%, 100%);
+}
+
+/*# sourceMappingURL=Form1.css.map */

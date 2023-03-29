@@ -1,0 +1,46 @@
+@use '../index.scss' as *;
+
+main {
+     width: 80%;
+     margin: auto;
+     margin-top: -60px;
+     background-color: $White;
+     border-radius: 10px;
+     padding: 40px 20px;
+     color: $Cool-gray;
+     box-shadow: 4px 2px 25px $Light-gray;
+     position: relative;
+
+    h3 {
+        font-family: "Fontzinha pika Bold", "san-serif", "Helvetica Neue" !important;
+        font-size: 28px !important;
+        padding-bottom: 20px;
+        color: $Marine-blue;
+     }
+
+    label {
+        color: $Marine-blue;
+     }
+
+    ::placeholder {
+        color: $Cool-gray !important;
+        font-size: 0.9rem;
+     }
+
+    button.btn-submit {
+        background-color: $Marine-blue;
+        color: white;
+        font-size: 12px;
+        border-radius: 3px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin-bottom: -100px;
+
+            &:hover {
+                background-color: lighten($color: $Marine-blue, $amount: 10%); /* nova função bem legal que eu n sabia q existia   */
+                color: $White;
+            }
+    }
+     
+}
