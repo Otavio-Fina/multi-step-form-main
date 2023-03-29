@@ -1,0 +1,110 @@
+@use '../index.scss' as *;
+
+button.btn-plain {
+    width: 90%;
+    background-color: $White;
+    border: 1px solid $Light-gray;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 15px;
+
+    &:focus {
+        background-color: $Alabaster;
+        border-color: rgb(182, 111, 224);
+    }
+
+    img {
+        margin-right: 20px;
+    }
+
+    div {
+
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+
+        h4 {
+            color: $Marine-blue;
+            font-family: "Fontzinha pika Bold", "san-serif", "Helvetica Neue";
+            margin: 0;
+        }
+    
+        p {
+            color: $Cool-gray;
+            margin: 0;
+        }
+    }
+
+    
+}
+
+
+div#switch-container {
+    width: 90%;
+    background-color: $Alabaster;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 35px 15px 0;
+
+    span {
+        padding: 5px 30px;
+        color: $Cool-gray;
+        font-family: "Fontzinha pika Medium", "san-serif", "Helvetica Neue";
+        transition: color 0.2s ease-in-out;
+        
+    }
+    
+    button#switch-plain {
+        height: 20px;
+        width: 40px;
+        border: 0;
+        border-radius: 10px;
+        background-color: $Marine-blue;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 3px;
+        color: $Alabaster;
+        transition: justify-content 0.1s ease-in-out;
+
+
+        div {
+            height: 14px;
+            width: 14px;
+            border-radius: 50%;
+            background-color: $White;
+        }
+    }
+
+
+}
+
+.active-span-switch {
+    color: $Marine-blue !important;
+}
+
+.month-free {
+    color: $Marine-blue !important;
+}
+
+button.btn-goback {
+    background-color: $White;
+    color: $Cool-gray;
+    font-size: 12px;
+    border-radius: 3px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-bottom: -100px;
+    width: 90px;
+
+        &:hover {
+            background-color: darken($color: $White, $amount: 10%); /* nova função bem legal que eu n sabia q existia   */
+            color: $Cool-gray;
+        }
+}

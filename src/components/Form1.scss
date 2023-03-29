@@ -36,6 +36,7 @@ main {
         right: 0;
         bottom: 0;
         margin-bottom: -100px;
+        width: 90px;
 
             &:hover {
                 background-color: lighten($color: $Marine-blue, $amount: 10%); /* nova função bem legal que eu n sabia q existia   */

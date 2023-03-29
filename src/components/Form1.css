@@ -57,6 +57,7 @@ main button.btn-submit {
   right: 0;
   bottom: 0;
   margin-bottom: -100px;
+  width: 90px;
 }
 main button.btn-submit:hover {
   background-color: #03418c; /* nova função bem legal que eu n sabia q existia   */
