@@ -1,0 +1,42 @@
+@use '../index.scss' as *;
+
+div.form-check {
+    width: 90%;
+    background-color: $White;
+    border: 1px solid $Light-gray;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    margin: 15px;
+
+    &:focus-within {
+        background-color: $Alabaster;
+
+        border-color: rgb(182, 111, 224);
+    }
+
+    h4 {
+        color: $Marine-blue;
+        font-family: "Fontzinha pika Bold", "san-serif", "Helvetica Neue";
+        margin: 0;
+        font-size: 18px;
+    }
+
+    p {
+        color: $Cool-gray;
+        margin: 0;
+        font-size: 13px;
+    }
+
+    input.form-check-input {
+        margin: 25px 25px 25px 15px;
+        width: 25px;
+        height: 25px;
+    }
+
+    p.cost-label {
+        margin: auto 0 auto auto;
+        color: rgb(84, 15, 169);
+    }
+}

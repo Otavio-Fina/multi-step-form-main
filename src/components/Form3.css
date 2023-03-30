@@ -1,0 +1,61 @@
+/**
+ * * PRIMARY COLORS 
+  */
+/**
+ * * NEUTRAL COLORS 
+  */
+@font-face {
+  font-family: "Fontzinha pika";
+  src: url(./assets/fonts/Ubuntu-Regular.ttf);
+}
+@font-face {
+  font-family: "Fontzinha pika Medium";
+  src: url(./assets/fonts/Ubuntu-Medium.ttf);
+}
+@font-face {
+  font-family: "Fontzinha pika Bold";
+  src: url(./assets/fonts/Ubuntu-Bold.ttf);
+}
+#body, #html {
+  width: 500px;
+  font-size: 16px;
+  font-family: "Fontzinha pika", "san-serif", "Helvetica Neue";
+  background-color: hsl(217, 100%, 97%);
+}
+
+div.form-check {
+  width: 90%;
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  margin: 15px;
+}
+div.form-check:focus-within {
+  background-color: hsl(231, 100%, 99%);
+  border-color: rgb(182, 111, 224);
+}
+div.form-check h4 {
+  color: hsl(213, 96%, 18%);
+  font-family: "Fontzinha pika Bold", "san-serif", "Helvetica Neue";
+  margin: 0;
+  font-size: 18px;
+}
+div.form-check p {
+  color: hsl(231, 11%, 63%);
+  margin: 0;
+  font-size: 13px;
+}
+div.form-check input.form-check-input {
+  margin: 25px 25px 25px 15px;
+  width: 25px;
+  height: 25px;
+}
+div.form-check p.cost-label {
+  margin: auto 0 auto auto;
+  color: rgb(84, 15, 169);
+}
+
+/*# sourceMappingURL=Form3.css.map */

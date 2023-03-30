@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux'; 
-import { getName } from '../features/info-forms/infoForms';
+import { getPlain, getPlainStyle } from '../features/info-forms/infoForms';
 import { useState } from 'react';
 
 
@@ -11,6 +11,12 @@ function Form2() {
     const [switchPlain, setSwitchPlain] = useState(true) //* true == monthly, false == yearly
 
 
+    function HandleChosePlainClick(e:any, plainAtt:string) {
+        e.preventDefault();
+
+        dispatch(getPlain(plainAtt));
+    }
+
     function HandleSwitchPlainClick(e:Event) {
         e.preventDefault();
 
@@ -19,12 +25,13 @@ function Form2() {
             document.getElementById('switch-yearly').className = 'active-span-switch'//@ts-ignore
             document.getElementById('switch-monthly').className = ''//@ts-ignore
             setSwitchPlain(false)
+            dispatch(getPlainStyle(false));
         } else { //@ts-ignore
             document.getElementById('switch-plain').style.justifyContent = "flex-start";//@ts-ignore
             document.getElementById('switch-monthly').className = 'active-span-switch'//@ts-ignore
             document.getElementById('switch-yearly').className = ''//@ts-ignore
             setSwitchPlain(true)
-
+            dispatch(getPlainStyle(true));
         }
     }
 
@@ -36,7 +43,7 @@ function Form2() {
                 <p>You have the option of monthly or yearly billing.</p>
                 <form>
                     <div className="form-group">
-                        <button className='btn-plain'>
+                        <button className='btn-plain' onClick={(e) => HandleChosePlainClick(e, 'arcade')}>
                             <img src="./src/assets/images/icon-arcade.svg" alt="" />
                             <div className='plan-info'>
                                 <h4>Arcade</h4>
@@ -47,7 +54,7 @@ function Form2() {
                     </div>
 
                     <div className="form-group">
-                        <button className='btn-plain'>
+                        <button className='btn-plain' onClick={(e) => HandleChosePlainClick(e, 'advanced')}>
                             <img src="./src/assets/images/icon-advanced.svg" alt="" />
                             <div className='plan-info'>
                                 <h4>Advanced</h4>
@@ -58,7 +65,7 @@ function Form2() {
                     </div>
 
                     <div className="form-group">
-                        <button className='btn-plain'>
+                        <button className='btn-plain'  onClick={(e) => HandleChosePlainClick(e, 'pro')}>
                             <img src="./src/assets/images/icon-pro.svg" alt="" />
                             <div className='plan-info'>
                                 <h4>Pro</h4>

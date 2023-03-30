@@ -36,7 +36,7 @@ button.btn-plain {
 }
 button.btn-plain:focus {
   background-color: hsl(231, 100%, 99%);
-  border-color: rgb(182, 111, 224);
+  border-color: rgb(84, 15, 169);
 }
 button.btn-plain img {
   margin-right: 20px;
