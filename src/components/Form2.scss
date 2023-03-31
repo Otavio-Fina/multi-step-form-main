@@ -10,9 +10,9 @@ button.btn-plain {
     padding: 20px;
     margin: 15px;
 
-    &:focus {
-        background-color: $Alabaster;
-        border-color: rgb(84, 15, 169);
+    &.focus {
+        background-color: $Alabaster !important;
+        border-color: rgb(84, 15, 169) !important;
     }
 
     img {

@@ -19,9 +19,9 @@ const initialState: formDataState = {
   phoneNumber: '',
   plain: 'arcade',
   styleOfPlain: false,
-  onlineService: true,
-  largerStorage: true,
-  customProfile: true,
+  onlineService: false,
+  largerStorage: false,
+  customProfile: false,
   pagination: 1
 }
 

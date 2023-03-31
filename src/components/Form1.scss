@@ -45,3 +45,12 @@ main {
     }
      
 }
+
+.error {
+    color: $Strawberry-red;
+    font-family: "Fontzinha pika", "san-serif", "Helvetica Neue" ;
+}
+
+.border-error {
+    border-color: $Strawberry-red !important;
+}

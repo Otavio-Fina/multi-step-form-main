@@ -12,9 +12,6 @@ function Form3() {
 
     const dispatch = useDispatch(); 
 
-    const [checkedOnline, setCheckedOnline] = useState(false);
-    const [checkedStore, setCheckedStore] = useState(false);
-    const [checkedCustom, setCheckedCustom] = useState(false);
 
     const styleOfPlain = useSelector((state:RootState) => state.infoData.styleOfPlain);
 
@@ -47,18 +44,21 @@ function Form3() {
 
 
     function handleClickOnline(e:any) {
-        const target = e.target as HTMLInputElement; setCheckedOnline(target.checked);
-        dispatch(getOnline(checkedOnline));
+        const target = e.target as HTMLInputElement;
+        dispatch(getOnline(target.checked));
+        console.log("on target cheked = " + target.checked);
     }
 
     function handleClickStore(e:any) {
-        const target = e.target as HTMLInputElement; setCheckedStore(target.checked);
-        dispatch(getStorage(checkedStore));
+        const target = e.target as HTMLInputElement;
+        dispatch(getStorage(target.checked));
+        console.log("stor target cheked = " + target.checked);
     }
 
     function handleClickCustom(e:any) {
-        const target = e.target as HTMLInputElement; setCheckedCustom(target.checked);
-        dispatch(getCustom(checkedCustom));
+        const target = e.target as HTMLInputElement;
+        dispatch(getCustom(target.checked));
+        console.log("custom target cheked = " + target.checked);
     }
     
     return (

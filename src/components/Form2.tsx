@@ -12,6 +12,8 @@ function Form2() {
 
     const [switchPlain, setSwitchPlain] = useState(true) //* true == monthly, false == yearly
 
+    const [focusedButton, setFocusedButton] = useState(0); 
+
 
     function HandleChosePlainClick(e:any, plainAtt:string) {
         e.preventDefault();
@@ -45,6 +47,10 @@ function Form2() {
         dispatch(getPagination(1))
       }
 
+    const handleButtonFocus = (index: number) => {
+        setFocusedButton(index);
+    }
+
     
     return (
         <main>
@@ -53,7 +59,7 @@ function Form2() {
                 <p>You have the option of monthly or yearly billing.</p>
                 <form>
                     <div className="form-group">
-                        <button className='btn-plain' onClick={(e) => HandleChosePlainClick(e, 'arcade')}>
+                        <button className={`btn-plain ${focusedButton === 0 ? 'focus' : ''}`} onClick={(e) => {HandleChosePlainClick(e, 'arcade'); handleButtonFocus(0);}}>
                             <img src="./src/assets/images/icon-arcade.svg" alt="" />
                             <div className='plan-info'>
                                 <h4>Arcade</h4>
@@ -64,7 +70,7 @@ function Form2() {
                     </div>
 
                     <div className="form-group">
-                        <button className='btn-plain' onClick={(e) => HandleChosePlainClick(e, 'advanced')}>
+                        <button className={`btn-plain ${focusedButton === 1 ? 'focus' : ''}`} onClick={(e) => {HandleChosePlainClick(e, 'advanced'); handleButtonFocus(1);}}>
                             <img src="./src/assets/images/icon-advanced.svg" alt="" />
                             <div className='plan-info'>
                                 <h4>Advanced</h4>
@@ -75,7 +81,7 @@ function Form2() {
                     </div>
 
                     <div className="form-group">
-                        <button className='btn-plain'  onClick={(e) => HandleChosePlainClick(e, 'pro')}>
+                        <button className={`btn-plain ${focusedButton === 2 ? 'focus' : ''}`}  onClick={(e) => {HandleChosePlainClick(e, 'pro'); handleButtonFocus(2);}}>
                             <img src="./src/assets/images/icon-pro.svg" alt="" />
                             <div className='plan-info'>
                                 <h4>Pro</h4>

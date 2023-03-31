@@ -64,4 +64,13 @@ main button.btn-submit:hover {
   color: hsl(0, 0%, 100%);
 }
 
+.error {
+  color: hsl(354, 84%, 57%);
+  font-family: "Fontzinha pika", "san-serif", "Helvetica Neue";
+}
+
+.border-error {
+  border-color: hsl(354, 84%, 57%) !important;
+}
+
 /*# sourceMappingURL=Form1.css.map */

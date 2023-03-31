@@ -1,5 +1,16 @@
 import { useDispatch } from 'react-redux'; 
 import { getName, getEmail, getPhone, getPagination } from '../features/info-forms/infoForms';
+import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
+
+
+const schema = yup.object({
+    name: yup.string().required(),
+    email: yup.string().email().required(),
+    phone: yup.number().integer().positive().required()
+  }).required();
+  type FormData = yup.InferType<typeof schema>;
 
 
 
@@ -9,22 +20,18 @@ function Form1() {
 
     const dispatch = useDispatch(); 
 
+    const { register, handleSubmit, formState: { errors } } = useForm<FormData>({
+        resolver: yupResolver(schema)
+      });
 
-    const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        dispatch(getName(event.target.value));
-      };
-
-      const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        dispatch(getEmail(event.target.value));
-      };
-    
-      const handlePhoneChange = (event: React.ChangeEvent<HTMLInputElement>)=> {
-        dispatch(getPhone(event.target.value));
-      };
-
-      const handleClickNext = () => {
+    const onSubmit = (data: FormData) => {
+        dispatch(getName(data.name))
+        dispatch(getEmail(data.email))
+        dispatch(getPhone(data.phone))
         dispatch(getPagination(2))
-      }
+    }
+
+
 
     
     return (
@@ -32,22 +39,25 @@ function Form1() {
             <div>
                 <h3>Personal info</h3>
                 <p>Please provide your name, email, address, and phone number.</p>
-                <form>
+                <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group">
                         <label htmlFor="name-input">Name</label>
-                        <input type="text" className="form-control" onChange={(e) => handleNameChange(e)} id="name-input" placeholder="ex. Manuel Gomes" />
+                        <input type="text" className={`form-control ${errors.name && "border-error"}`} {...register("name")} id="name-input" placeholder="ex. Manuel Gomes" />
+                        <p className='error'>{errors.name && "Nome Invalido"}</p>
                     </div>
 
                     <div className="form-group">
                         <label htmlFor="email-input">Email Address</label>
-                        <input type="text" className="form-control" id="email-input" onChange={(e) => handleEmailChange(e)} placeholder="ex. manuel@exemplo.com" />
+                        <input type="text" className={`form-control ${errors.email && "border-error"}`} id="email-input" {...register("email")} placeholder="ex. manuel@exemplo.com" />
+                        <p className='error'>{errors.email && "Email Invalido"}</p>
                     </div>
 
                     <div className="form-group">
                         <label htmlFor="phone-number">Phone Number</label>
-                        <input type="text" className="form-control" id="phone-number" onChange={(e) => handlePhoneChange(e)} placeholder="ex. 11 999887766" />
+                        <input type="text" className={`form-control ${errors.phone && "border-error"}`} id="phone-number" {...register("phone")} placeholder="ex. 11 999887766" />
+                        <p className='error'>{errors.phone && "Numero Invalido"}</p>
                     </div>
-                    <button type='submit' onClick={handleClickNext} className='btn btn-submit'>Next Step</button>
+                    <button type='submit' className='btn btn-submit'>Next Step</button>
                 </form>
             </div>
         </main>

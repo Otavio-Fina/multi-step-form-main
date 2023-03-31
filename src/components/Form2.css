@@ -34,9 +34,9 @@ button.btn-plain {
   padding: 20px;
   margin: 15px;
 }
-button.btn-plain:focus {
-  background-color: hsl(231, 100%, 99%);
-  border-color: rgb(84, 15, 169);
+button.btn-plain.focus {
+  background-color: hsl(231, 100%, 99%) !important;
+  border-color: rgb(84, 15, 169) !important;
 }
 button.btn-plain img {
   margin-right: 20px;

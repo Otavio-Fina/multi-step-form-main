@@ -20,15 +20,40 @@ function Form4() {
 
 
 
-    const [plainCost, setPlainCost] = useState(0)
 
     const handleClickNext = () => {
         dispatch(getPagination(5))
       }
 
       const handleClickBack = () => {
+        dispatch(getCustom(false))
+        dispatch(getStorage(false))
+        dispatch(getOnline(false))
         dispatch(getPagination(3))
       }
+
+
+
+    function RespectivePlainCostP() {
+        switch (plain) {
+            case "arcade": 
+            return (
+                <p className='plain-price'>{plainType?<>$9/mo</>:<>$90/yr</>}</p>
+            )
+            case "advanced": 
+            return (
+                <p className='plain-price'>{plainType?<>$12/mo</>:<>$120/yr</>}</p>
+            )
+            case "pro": 
+            return (
+                <p className='plain-price'>{plainType?<>$15/mo</>:<>$150/yr</>}</p>
+            )
+            default:
+            return (
+                <p className='plain-price'>{plainType?<>$9/mo</>:<>$90/yr</>}</p>
+            )
+        }
+    }
 
 
 
@@ -39,7 +64,7 @@ function Form4() {
                 plain.toUpperCase()}{plainType?<>(MONTHLY)</>:<>(YEARLY)</>}
                 </h4>
                 <p className='link-to-2'>Change</p>
-                <p className='plain-price'>{plainType?<>$9/mo</>:<>$90/yr</>}</p>
+                <RespectivePlainCostP/>
             </>
         )
     }
