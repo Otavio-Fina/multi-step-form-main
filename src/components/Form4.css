@@ -1,0 +1,76 @@
+/**
+ * * PRIMARY COLORS 
+  */
+/**
+ * * NEUTRAL COLORS 
+  */
+@font-face {
+  font-family: "Fontzinha pika";
+  src: url(./assets/fonts/Ubuntu-Regular.ttf);
+}
+@font-face {
+  font-family: "Fontzinha pika Medium";
+  src: url(./assets/fonts/Ubuntu-Medium.ttf);
+}
+@font-face {
+  font-family: "Fontzinha pika Bold";
+  src: url(./assets/fonts/Ubuntu-Bold.ttf);
+}
+#body, #html {
+  width: 500px;
+  font-size: 16px;
+  font-family: "Fontzinha pika", "san-serif", "Helvetica Neue";
+  background-color: hsl(217, 100%, 97%);
+}
+
+#container-price {
+  background-color: hsl(217, 100%, 97%);
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 7px;
+}
+#container-price h4 {
+  font-size: 17px;
+  color: hsl(213, 96%, 18%);
+  font-family: "Fontzinha pika Bold", "san-serif", "Helvetica Neue";
+}
+#container-price .link-to-2 {
+  text-decoration: underline;
+  cursor: pointer;
+}
+#container-price .plain-price {
+  color: hsl(213, 96%, 18%);
+  font-family: "Fontzinha pika Bold", "san-serif", "Helvetica Neue";
+  position: absolute;
+  right: 0;
+  top: 10%;
+  padding: 10px;
+}
+
+.separador {
+  border-top: 1px solid hsl(229, 24%, 87%);
+}
+
+.stuffs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+#total-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 15px;
+}
+
+.custo {
+  color: hsl(243, 100%, 62%);
+  font-size: 19px;
+  font-family: "Fontzinha pika Bold", "san-serif", "Helvetica Neue";
+}
+
+/*# sourceMappingURL=Form4.css.map */

@@ -1,9 +1,11 @@
 import { useDispatch } from 'react-redux'; 
-import { getName, getEmail, getPhone } from '../features/info-forms/infoForms';
+import { getName, getEmail, getPhone, getPagination } from '../features/info-forms/infoForms';
 
 
 
 function Form1() {
+    //@ts-ignore
+    document.getElementById("links").innerHTML = '<link rel="stylesheet" href="src/components/Form1.css">'
 
     const dispatch = useDispatch(); 
 
@@ -19,6 +21,11 @@ function Form1() {
       const handlePhoneChange = (event: React.ChangeEvent<HTMLInputElement>)=> {
         dispatch(getPhone(event.target.value));
       };
+
+      const handleClickNext = () => {
+        dispatch(getPagination(2))
+      }
+
     
     return (
         <main>
@@ -28,19 +35,19 @@ function Form1() {
                 <form>
                     <div className="form-group">
                         <label htmlFor="name-input">Name</label>
-                        <input type="text" className="form-control" id="name-input" placeholder="ex. Manuel Gomes" />
+                        <input type="text" className="form-control" onChange={(e) => handleNameChange(e)} id="name-input" placeholder="ex. Manuel Gomes" />
                     </div>
 
                     <div className="form-group">
                         <label htmlFor="email-input">Email Address</label>
-                        <input type="text" className="form-control" id="email-input" placeholder="ex. manuel@exemplo.com" />
+                        <input type="text" className="form-control" id="email-input" onChange={(e) => handleEmailChange(e)} placeholder="ex. manuel@exemplo.com" />
                     </div>
 
                     <div className="form-group">
                         <label htmlFor="phone-number">Phone Number</label>
-                        <input type="text" className="form-control" id="phone-number" placeholder="ex. 11 999887766" />
+                        <input type="text" className="form-control" id="phone-number" onChange={(e) => handlePhoneChange(e)} placeholder="ex. 11 999887766" />
                     </div>
-                    <button type='submit' className='btn btn-submit'>Next Step</button>
+                    <button type='submit' onClick={handleClickNext} className='btn btn-submit'>Next Step</button>
                 </form>
             </div>
         </main>

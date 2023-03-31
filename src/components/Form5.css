@@ -1,0 +1,40 @@
+/**
+ * * PRIMARY COLORS 
+  */
+/**
+ * * NEUTRAL COLORS 
+  */
+@font-face {
+  font-family: "Fontzinha pika";
+  src: url(./assets/fonts/Ubuntu-Regular.ttf);
+}
+@font-face {
+  font-family: "Fontzinha pika Medium";
+  src: url(./assets/fonts/Ubuntu-Medium.ttf);
+}
+@font-face {
+  font-family: "Fontzinha pika Bold";
+  src: url(./assets/fonts/Ubuntu-Bold.ttf);
+}
+#body, #html {
+  width: 500px;
+  font-size: 16px;
+  font-family: "Fontzinha pika", "san-serif", "Helvetica Neue";
+  background-color: hsl(217, 100%, 97%);
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+div p {
+  width: 80%;
+}
+div a {
+  color: aqua;
+}
+
+/*# sourceMappingURL=Form5.css.map */

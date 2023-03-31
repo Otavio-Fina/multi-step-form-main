@@ -1,11 +1,14 @@
 import { useDispatch, useSelector } from 'react-redux'; 
-import { getCustom, getOnline, getStorage } from '../features/info-forms/infoForms';
-import { useState } from 'react';
+import { getCustom, getOnline, getStorage, getPagination } from '../features/info-forms/infoForms';
+import { useEffect, useState } from 'react';
 import { RootState } from '../app/store';
 
 
 
 function Form4() {
+
+            //@ts-ignore
+            document.getElementById("links").innerHTML = '<link rel="stylesheet" href="src/components/Form1.css"><link rel="stylesheet" href="src/components/Form2.css"><link rel="stylesheet" href="src/components/Form3.css">    <link rel="stylesheet" href="src/components/Form4.css">'
 
     const dispatch = useDispatch(); 
 
@@ -19,6 +22,14 @@ function Form4() {
 
     const [plainCost, setPlainCost] = useState(0)
 
+    const handleClickNext = () => {
+        dispatch(getPagination(5))
+      }
+
+      const handleClickBack = () => {
+        dispatch(getPagination(3))
+      }
+
 
 
     function PlainPrice() {
@@ -28,7 +39,7 @@ function Form4() {
                 plain.toUpperCase()}{plainType?<>(MONTHLY)</>:<>(YEARLY)</>}
                 </h4>
                 <p className='link-to-2'>Change</p>
-                <p>{plainType?<>$9/mo</>:<>$90/yr</>}</p>
+                <p className='plain-price'>{plainType?<>$9/mo</>:<>$90/yr</>}</p>
             </>
         )
     }
@@ -36,79 +47,78 @@ function Form4() {
     function OtherAddedStuffs() {
         return(
             <>
-                {onlineService && <div><p>Online service</p> {plain?<p className='cost-label'>+$1/mo</p>:<p className='cost-label'>+$10/yr</p>}</div>}
-                {largerStorage && <div><p>Larger Storage</p> {plain?<p className='cost-label'>+$2/mo</p>:<p className='cost-label'>+$20/yr</p>}</div>}
-                {customProfile && <div><p>Customizable profile</p> {plain?<p className='cost-label'>+$2/mo</p>:<p className='cost-label'>+$30/yr</p>}</div>}
+                {onlineService && <div className='stuffs'><p>Online service</p> {plainType?<p className='cost-label'>+$1/mo</p>:<p className='cost-label'>+$10/yr</p>}</div>}
+                {largerStorage && <div className='stuffs'><p>Larger Storage</p> {plainType?<p className='cost-label'>+$2/mo</p>:<p className='cost-label'>+$20/yr</p>}</div>}
+                {customProfile && <div className='stuffs'><p>Customizable profile</p> {plainType?<p className='cost-label'>+$2/mo</p>:<p className='cost-label'>+$30/yr</p>}</div>}
             </>
         )
     }
 
-    function SumPrice () {
-        if (plainType) {
-            switch (plain) {
-                case 'arcade':
-                    setPlainCost(9)
-                    break
-                case 'advanced':
-                    setPlainCost(12)
-                    break
-                case 'pro':
-                    setPlainCost(15)
-                    break
-            }
+    function SumPrice () { 
+    
+        let cost = 0
+        
+            if (plainType) {
+                switch (plain) {
+                    case 'arcade':
+                        cost = 9
+                        break
+                    case 'advanced':
+                        cost = 12
+                        break
+                    case 'pro':
+                        cost = 15
+                        break
+                }
+    
+                if (onlineService) {
+                    cost += 1
+                }
+    
+                if (largerStorage) {
+                    cost += 2
+                }
+    
+                if (customProfile) {
+                    cost += 2
+                }
 
-            if (onlineService) {
-                let price = plainCost + 1
-                setPlainCost(price)
-            }
-
-            if (largerStorage) {
-                let price = plainCost + 2
-                setPlainCost(price)
-            }
-
-            if (customProfile) {
-                let price = plainCost + 2
-                setPlainCost(price)
-            }
-
-            return (
-                <p>+{plainCost}/mo</p>
-            )
-
-        } else {
-            switch (plain) {
-                case 'arcade':
-                    setPlainCost(90)
-                    break
-                case 'advanced':
-                    setPlainCost(120)
-                    break
-                case 'pro':
-                    setPlainCost(150)
-                    break
-            }
-
-            if (onlineService) {
-                let price = plainCost + 10
-                setPlainCost(price)
-            }
-
-            if (largerStorage) {
-                let price = plainCost + 20
-                setPlainCost(price)
-            }
-
-            if (customProfile) {
-                let price = plainCost + 30
-                setPlainCost(price)
-            }
-
-            return (
-                <p>+{plainCost}/yr</p>
-            )
+    
+                return (
+                    <p className='custo'>+{cost}/mo</p>
+                )
+    
+            } else {
+                switch (plain) {
+                    case 'arcade':
+                        cost = 90
+                        break
+                    case 'advanced':
+                        cost = 120
+                        break
+                    case 'pro':
+                        cost = 150
+                        break
+                }
+    
+                if (onlineService) {
+                    cost += 10
+                }
+    
+                if (largerStorage) {
+                    cost += 20
+                }
+    
+                if (customProfile) {
+                    cost += 30
+                }
+    
+                return (
+                    <p className='custo'>+{cost}/yr</p>
+                )
+            
         }
-
+        
     }
 
 
@@ -125,12 +135,12 @@ function Form4() {
                     </div>
 
                     <div id='total-container'>
-                        <p>Total (per {plain?<>month</>:<>year</>})</p>
+                        <p>Total (per {plainType?<>month</>:<>year</>})</p> {/*@ts-ignore*/ }
                         <SumPrice />
                     </div>
 
-                    <button className='btn btn-goback'>Go Back</button>
-                    <button type='submit' className='btn btn-submit'>Confirm</button>
+                    <button className='btn btn-goback' onClick={handleClickBack}>Go Back</button>
+                    <button type='submit' onClick={handleClickNext} className='btn btn-submit'>Confirm</button>
                 </form>
             </div>
         </main>

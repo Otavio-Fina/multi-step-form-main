@@ -1,10 +1,12 @@
 import { useDispatch } from 'react-redux'; 
-import { getPlain, getPlainStyle } from '../features/info-forms/infoForms';
+import { getPlain, getPlainStyle, getPagination } from '../features/info-forms/infoForms';
 import { useState } from 'react';
 
 
 
 function Form2() {
+    //@ts-ignore
+    document.getElementById("links").innerHTML = '<link rel="stylesheet" href="src/components/Form1.css"><link rel="stylesheet" href="src/components/Form2.css">'
 
     const dispatch = useDispatch(); 
 
@@ -34,6 +36,14 @@ function Form2() {
             dispatch(getPlainStyle(true));
         }
     }
+
+    const handleClickNext = () => {
+        dispatch(getPagination(3))
+      }
+
+    const handleClickBack = () => {
+        dispatch(getPagination(1))
+      }
 
     
     return (
@@ -82,8 +92,8 @@ function Form2() {
                             <span id='switch-yearly' className=''>Yearly</span>
                         </div>
                     </div>
-                    <button className='btn btn-goback'>Go Back</button>
-                    <button type='submit' className='btn btn-submit'>Next Step</button>
+                    <button className='btn btn-goback' onClick={handleClickBack}>Go Back</button>
+                    <button type='submit' onClick={handleClickNext} className='btn btn-submit'>Next Step</button>
                 </form>
             </div>
         </main>

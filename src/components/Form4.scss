@@ -1,0 +1,55 @@
+@use '../index.scss' as *;
+
+#container-price {
+    background-color: $Magnolia;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 7px;
+
+    h4 {
+        font-size: 17px;
+        color: $Marine-blue;
+        font-family: "Fontzinha pika Bold", "san-serif", "Helvetica Neue";
+    }
+
+    .link-to-2 {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    .plain-price {
+        color: $Marine-blue;
+        font-family: "Fontzinha pika Bold", "san-serif", "Helvetica Neue";
+        position: absolute;
+        right: 0;
+        top: 10%;
+        padding: 10px;
+    }
+}
+
+.separador {
+    border-top: 1px solid $Light-gray;
+}
+
+.stuffs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+
+#total-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 15px;
+}
+
+.custo {
+    color: $Purplish-blue;
+    font-size: 19px;
+    font-family: "Fontzinha pika Bold", "san-serif", "Helvetica Neue";
+}

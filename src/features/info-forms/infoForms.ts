@@ -10,17 +10,19 @@ export interface formDataState {
   onlineService: boolean,
   largerStorage: boolean,
   customProfile: boolean,
+  pagination: number
 }
 
 const initialState: formDataState = {
   name: '',
   emailAddress: '',
   phoneNumber: '',
-  plain: '',
+  plain: 'arcade',
   styleOfPlain: false,
-  onlineService: false,
-  largerStorage: false,
-  customProfile: false,
+  onlineService: true,
+  largerStorage: true,
+  customProfile: true,
+  pagination: 1
 }
 
 export const formSlice = createSlice({
@@ -51,10 +53,13 @@ export const formSlice = createSlice({
     getCustom: (state, action: PayloadAction<boolean>) => {
       state.customProfile = action.payload;
       },
+    getPagination: (state, action: PayloadAction<number>) => {
+      state.pagination = action.payload;
+      },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { getName, getEmail, getPhone, getPlain, getPlainStyle, getOnline, getStorage, getCustom } = formSlice.actions
+export const { getName, getEmail, getPhone, getPlain, getPlainStyle, getOnline, getStorage, getCustom, getPagination } = formSlice.actions
 
 export default formSlice.reducer

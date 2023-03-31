@@ -1,11 +1,14 @@
 import { useDispatch, useSelector } from 'react-redux'; 
-import { getCustom, getOnline, getStorage } from '../features/info-forms/infoForms';
+import { getCustom, getOnline, getStorage, getPagination } from '../features/info-forms/infoForms';
 import { useState, useEffect } from 'react';
 import { RootState } from '../app/store';
 
 
 
 function Form3() {
+
+        //@ts-ignore
+        document.getElementById("links").innerHTML = '<link rel="stylesheet" href="src/components/Form1.css"><link rel="stylesheet" href="src/components/Form2.css"><link rel="stylesheet" href="src/components/Form3.css">'
 
     const dispatch = useDispatch(); 
 
@@ -14,6 +17,14 @@ function Form3() {
     const [checkedCustom, setCheckedCustom] = useState(false);
 
     const styleOfPlain = useSelector((state:RootState) => state.infoData.styleOfPlain);
+
+    const handleClickNext = () => {
+        dispatch(getPagination(4))
+      }
+
+      const handleClickBack = () => {
+        dispatch(getPagination(2))
+      }
 
 
 
@@ -89,8 +100,8 @@ function Form3() {
                         {styleOfPlain ? <p className='cost-label'>+$2/mo</p>:<p className='cost-label'>+$30/yr</p>}
                     </div>
 
-                    <button className='btn btn-goback'>Go Back</button>
-                    <button type='submit' className='btn btn-submit'>Next Step</button>
+                    <button className='btn btn-goback' onClick={handleClickBack}>Go Back</button>
+                    <button type='submit' onClick={handleClickNext} className='btn btn-submit'>Next Step</button>
                 </form>
             </div>
         </main>
