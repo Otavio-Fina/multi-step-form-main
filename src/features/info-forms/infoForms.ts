@@ -18,7 +18,7 @@ const initialState: formDataState = {
   emailAddress: '',
   phoneNumber: '',
   plain: 'arcade',
-  styleOfPlain: false,
+  styleOfPlain: true,
   onlineService: false,
   largerStorage: false,
   customProfile: false,

@@ -46,19 +46,16 @@ function Form3() {
     function handleClickOnline(e:any) {
         const target = e.target as HTMLInputElement;
         dispatch(getOnline(target.checked));
-        console.log("on target cheked = " + target.checked);
     }
 
     function handleClickStore(e:any) {
         const target = e.target as HTMLInputElement;
         dispatch(getStorage(target.checked));
-        console.log("stor target cheked = " + target.checked);
     }
 
     function handleClickCustom(e:any) {
         const target = e.target as HTMLInputElement;
         dispatch(getCustom(target.checked));
-        console.log("custom target cheked = " + target.checked);
     }
     
     return (

@@ -19,19 +19,24 @@ $Magnolia: hsl(217, 100%, 97%);
 $Alabaster: hsl(231, 100%, 99%);
 $White: hsl(0, 0%, 100%);
 
+/*
+!ok, eu sei que a font n ta funcionando, era para ser .tff, mas percebi
+!isso no final do projeto e na real a outra font ficou bem mais bonitinha
+*/
+
 @font-face {
   font-family: "Fontzinha pika";
-  src: url(./assets/fonts/Ubuntu-Regular.ttf);
+  src: url(../assets/fonts/Ubuntu-Regular.ttf);
 }
 
 @font-face {
   font-family: "Fontzinha pika Medium";
-  src: url(./assets/fonts/Ubuntu-Medium.ttf);
+  src: url(../assets/fonts/Ubuntu-Medium.ttf);
 }
 
 @font-face {
   font-family: "Fontzinha pika Bold";
-  src: url(./assets/fonts/Ubuntu-Bold.ttf);
+  src: url(../assets/fonts/Ubuntu-Bold.ttf);
 }
 
 #body, #html
@@ -42,3 +47,16 @@ $White: hsl(0, 0%, 100%);
   background-color: $Magnolia;
 }
 
+@media screen and (min-width: 500px) {
+  #body, #html
+  {
+  width: 100%;
+}
+}
+
+@media screen and (min-width: 1000px) {
+  #body, #html
+  {
+  width: 100%;
+}
+}
