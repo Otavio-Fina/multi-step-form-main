@@ -3,7 +3,7 @@
 header {
     width: 100%;
     height: 140px;
-    background-image: url(../assets/images/bg-sidebar-mobile.svg);
+    background-image: url(../assets/images/bg-sidebar-mobile.svg) !important;
     background-size: cover;
 }
 
@@ -43,7 +43,7 @@ header div div {
     header {
         width: 250px;
         height: 500px;
-        background-image: url(../assets/images/bg-sidebar-desktop.svg);
+        background-image: url(../assets/images/bg-sidebar-desktop.svg) !important;
         border-radius: 5px 0 0 5px;
         display: flex;
         flex-direction: row;
