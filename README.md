@@ -1,101 +1,221 @@
-# Frontend Mentor - Multi-step form
+# Frontend Mentor - Multi-step form solution
 
-![Design preview for the Multi-step form coding challenge](./design/desktop-preview.jpg)
+Esse desafio foi proposto pelo [Frontend Mentor](https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ/hub). 
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [O Desafio](#o-desafio)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [Meu Processo](#meu-processo)
+  - [Feito com](#feito-com)
+  - [Oque eu  aprendi](#oque-eu-aprendi)
+- [Autor](#autor)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
 
-**To do this challenge, you need a good understanding of HTML, CSS and JavaScript.**
 
-## The challenge
+## Overview
 
-Your challenge is to build out this multi-step form and get it looking as close to the design as possible.
+Uma SPA muito desafiadora, onde o uso do _**REDUX**_ é essencial. Basicamente o projeto foi montar uma SPA de assinatura de um plano com um forms (com validação) onde as informações do forms alteravam a aplicação. O uso do _**REDUX**_ foi essencial para aplicação, tanto para paginação quanto para modelagem do conteúdo de acordo com os inputs do usuário. o  _**REACT-HOOK-FORM**_ foi muito util para a validação. Foi muito usado  _**SASS**_ para estilização. tudo foi construído no ambiente  _**VITE**_.
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
 
-Your users should be able to:
+### O Desafio
 
-- Complete each step of the sequence
-- Go back to a previous step to update their selections
-- See a summary of their selections on the final step and confirm their order
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
-- Receive form validation messages if:
-  - A field has been missed
-  - The email address is not formatted correctly
-  - A step is submitted, but no selection has been made
+O Usuário deve:
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+- Completar cada passo do formulário
+- Voltar cada passo e alterar as informações
+- Ver o valor de todos os inputs em um form final, calculando o resultado
+- Ser responsivo
+- Design interativo
+- Receber a validação do forms se:
+  - Um input estiver vazio
+  - A formatação do email estiver errada
 
-## Where to find everything
+### Screenshot
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+![Form1](./public/screenshots/desktop01.png)
+![Form1 active](./public/screenshots/desktop01active.png)
+![Form2](./public/screenshots/desktop02.png)
+![Form2 active](./public/screenshots/desktop02active.png)
+![Form3](./public/screenshots/desktop03.png)
+![Form4](./public/screenshots/desktop04.png)
+![Form4 active](./public/screenshots/desktop04active.png)
+![Form5](./public/screenshots/desktop05.png)
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+![Form1 mobile](./public/screenshots/mobile01.png)
+![Form2 mobile](./public/screenshots/mobile02.png)
+![Form3 mobile](./public/screenshots/mobile03.png)
+![Form4 mobile](./public/screenshots/mobile04.png)
+![Form5 mobile](./public/screenshots/mobile05.png)
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
 
-All the required assets for this project are in the `/assets` folder. The images are already exported for the correct screen size and optimized.
 
-We also include variable and static font files for the required fonts for this project. You can choose to either link to Google Fonts or use the local font files to host the fonts yourself. Note that we've removed the static font files for the font weights that aren't needed for this project.
+### Links
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-## Building your project
+## Meu processo
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+### Feito Com
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+- ![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
+- ![CSS](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
+- ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+- ![SASS](https://github.com/shivamkapasia0/img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+- ![Flexbox](https://img.shields.io/badge/flexbox-100000?style=for-the-badge&logo=FLEXBOX&logoColor=white&labelColor=7FF106&color=7FF106)
+- ![Mobile-first workflow](https://img.shields.io/badge/MOBILE_FIRST_WORKFLOW-100000?style=for-the-badge&logo=&logoColor=white&labelColor=9E06EA&color=9E06EA)
+- ![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white)
+- ![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+- ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+- ![Flux](https://img.shields.io/badge/FLUX-100000?style=for-the-badge&logo=FLUX&logoColor=white&labelColor=2F08DD&color=2F08DD)
+- ![Redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)
+- ![React-hook-form](https://img.shields.io/badge/VITE-100000?style=for-the-badge&logo=REACT-HOOK-FORM&logoColor=white&labelColor=F00B0B&color=F00B0B)
+- ![Vite](https://img.shields.io/badge/VITE-100000?style=for-the-badge&logo=vite&logoColor=white&labelColor=00D9FF&color=00D9FF)
+- ![Git](https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white)
+- ![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 
-## Deploying your project
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+### Oque eu aprendi
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+Meus códigos mais interessantes:
 
-## Create a custom `README.md`
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+Uma paginação usando redux
+```JSX
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+  const pagination = useSelector((state:RootState) => state.infoData.pagination)
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+  function Page() {
+    switch (pagination) {
+      case 1:
+        return <Form1 />
+      case 2:
+        return <Form2 />
+      case 3:
+        return <Form3 />
+      case 4:
+        return <Form4 />
+      case 5:
+        return <Form5 />
+      default:
+        return <Form1 />
+    }
+  }
 
-## Submitting your solution
+```
+```js
+const handleClickNext = () => {
+        dispatch(getPagination(4))
+      }
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+      const handleClickBack = () => {
+        dispatch(getPagination(2))
+      }
+```
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+também há uma alteração de switchs ao clique e reconhecimento da posição dos switchs quando o user volta para a pagina
 
-## Sharing your solution
+```JSX
+ useEffect(() => {
+      
+        if (switchPlain) { 
+            document.getElementById('switch-plain').style.justifyContent = "flex-start";
+            document.getElementById('switch-yearly').className = ''
+            document.getElementById('switch-monthly').className = 'active-span-switch'
+        } else { 
+            document.getElementById('switch-plain').style.justifyContent = "flex-end";
+            document.getElementById('switch-monthly').className = ''
+            document.getElementById('switch-yearly').className = 'active-span-switch'
+        }
+    }, []) 
+    
 
-There are multiple places you can share your solution:
+    function HandleSwitchPlainClick(e:Event) {
+        e.preventDefault();
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+        if (switchPlain) { 
+            document.getElementById('switch-plain').style.justifyContent = "flex-end";
+            document.getElementById('switch-yearly').className = 'active-span-switch'
+            document.getElementById('switch-monthly').className = ''
+            setSwitchPlain(false)
+            dispatch(getPlainStyle(false));
+        } else {
+            document.getElementById('switch-plain').style.justifyContent = "flex-start";
+            document.getElementById('switch-monthly').className = 'active-span-switch'
+            document.getElementById('switch-yearly').className = ''
+            setSwitchPlain(true)
+            dispatch(getPlainStyle(true));
+        }
+    }
+```
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+Além disso, há alguns códigos que dependem de inputs que sobem em variaveis globais no REDUX para informações personalizadas
 
-## Got feedback for us?
+```JSX
+<div className="form-check">
+  <input onClick={(e) => {handleClickOnline(e)}} className="form-check-input" type="checkbox" value="" id="check-online-service" checked={infoData.onlineService} />
+      <label className="form-check-label" htmlFor="check-online-service">
+        <div className='plan-info'>
+           <h4>Online service</h4>
+           <p>Access to multiplayer games</p>
+        </div>
+      </label>
+      {infoData.styleOfPlain ? <p className='cost-label'>+$1/mo</p>:<p className='cost-label'>+$10/yr</p>}
+</div>
+```
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+Tambem há uma validação usando o _**REACT-HOOK-FORM**_ 
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+```JSX
+const schema = yup.object({
+    name: yup.string().required(),
+    email: yup.string().email().required(),
+    phone: yup.number().integer().positive().required()
+  }).required();
+  type FormData = yup.InferType<typeof schema>;
+```
 
-**Have fun building!** 🚀
+```JSX
+const { register, handleSubmit, formState: { errors } } = useForm<FormData>({
+        resolver: yupResolver(schema)
+      });
+```
+
+```JSX
+const { register, handleSubmit, formState: { errors } } = useForm<FormData>({
+        resolver: yupResolver(schema)
+      });
+```
+
+```JSX
+const onSubmit = (data: FormData) => {
+        dispatch(getName(data.name))
+        dispatch(getEmail(data.email))
+        dispatch(getPhone(data.phone))
+        dispatch(getPagination(2))
+    }
+```
+
+
+
+_Eu aprendi muito com com o projeto. O uso muito frequente de variaveis globais fez eu melhorar MUITO minhas abilidades no **REDUX**. Além da validação usando **REACT-HOOK-FORM**_
+_e estrutura de pastas com base no ambiente **REACT**. Também melhorei minha construção de paginação de **SPA's** usando **REDUX**_
+
+Ainda há muitos códigos bem interessantes, mas tbm n quero fazer um baita E-BOOK aqui kkk então pode dar uma olhada no código e ver como as coisas funcionam
+
+
+
+
+## Autor
+
+- Website - [otaviofina.website](https://otaviofina.website)
+- GitHub - [github.com/Otavio-Fina](https://github.com/Otavio-Fina)
+- Linkedin - [www.linkedin.com/in/otavio-fina/](https://www.linkedin.com/in/otavio-fina/)
+
+
+
+

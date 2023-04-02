@@ -10,7 +10,8 @@ export interface formDataState {
   onlineService: boolean,
   largerStorage: boolean,
   customProfile: boolean,
-  pagination: number
+  pagination: number,
+  focusedPlain: number
 }
 
 const initialState: formDataState = {
@@ -18,11 +19,12 @@ const initialState: formDataState = {
   emailAddress: '',
   phoneNumber: '',
   plain: 'arcade',
-  styleOfPlain: true,
+  styleOfPlain: true, //*monthly
   onlineService: false,
   largerStorage: false,
   customProfile: false,
-  pagination: 1
+  pagination: 1,
+  focusedPlain: 0 //*arcade 
 }
 
 export const formSlice = createSlice({
@@ -56,10 +58,12 @@ export const formSlice = createSlice({
     getPagination: (state, action: PayloadAction<number>) => {
       state.pagination = action.payload;
       },
+    getFocusedPlain: (state, action: PayloadAction<number>) => {
+      state.focusedPlain = action.payload;
+      }
   },
 })
 
-// Action creators are generated for each case reducer function
-export const { getName, getEmail, getPhone, getPlain, getPlainStyle, getOnline, getStorage, getCustom, getPagination } = formSlice.actions
+export const { getName, getEmail, getPhone, getPlain, getPlainStyle, getOnline, getStorage, getCustom, getPagination, getFocusedPlain } = formSlice.actions
 
 export default formSlice.reducer

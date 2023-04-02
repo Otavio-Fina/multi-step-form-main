@@ -1,14 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux'; 
-import { getCustom, getOnline, getStorage, getPagination } from '../features/info-forms/infoForms';
-import { useEffect, useState } from 'react';
+import { getPagination } from '../features/info-forms/infoForms';
 import { RootState } from '../app/store';
 
 
 
 function Form4() {
 
-            //@ts-ignore
-            document.getElementById("links").innerHTML = '<link rel="stylesheet" href="src/components/Form1.css"><link rel="stylesheet" href="src/components/Form2.css"><link rel="stylesheet" href="src/components/Form3.css">    <link rel="stylesheet" href="src/components/Form4.css">'
+    //@ts-ignore
+    document.getElementById("links").innerHTML = '<link rel="stylesheet" href="src/components/Form1.css"><link rel="stylesheet" href="src/components/Form2.css"><link rel="stylesheet" href="src/components/Form3.css">    <link rel="stylesheet" href="src/components/Form4.css">'
 
     const dispatch = useDispatch(); 
 
@@ -25,10 +24,12 @@ function Form4() {
         dispatch(getPagination(5))
       }
 
+      const handleClickChange = () => {
+        dispatch(getPagination(2))        
+      }
+
       const handleClickBack = () => {
-        dispatch(getCustom(false))
-        dispatch(getStorage(false))
-        dispatch(getOnline(false))
+
         dispatch(getPagination(3))
       }
 
@@ -63,7 +64,7 @@ function Form4() {
                 <h4>{
                 plain.toUpperCase()}{plainType?<>(MONTHLY)</>:<>(YEARLY)</>}
                 </h4>
-                <p className='link-to-2'>Change</p>
+                <p className='link-to-2' onClick={handleClickChange}>Change</p>
                 <RespectivePlainCostP/>
             </>
         )

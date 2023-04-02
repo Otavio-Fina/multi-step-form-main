@@ -108,3 +108,50 @@ button.btn-goback {
             color: $Cool-gray;
         }
 }
+
+@media screen and (min-width: 1000px) {
+    main
+    {
+    width: 600px;
+  }
+
+  button.btn-plain {
+    width: 150px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 15px;
+    justify-content: space-around;
+
+
+
+    img {
+        margin-right: 0;
+    }
+
+    div {
+        text-align: center;
+    }
+    }
+
+    form.form-flex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    div#switch-container {
+        width: 510px;
+        margin-top: 0;
+        padding: 5px;
+    }
+
+    button.btn-goback {
+        margin: 15px !important;
+    }
+
+
+  
+  }

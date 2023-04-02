@@ -17,6 +17,12 @@
     .link-to-2 {
         text-decoration: underline;
         cursor: pointer;
+        transition: all 0.1s ease-in-out;
+
+        &:hover {
+            font-size: 17px;
+            color: $Purplish-blue;
+        }
     }
 
     .plain-price {

@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { useSelector } from 'react-redux'; 
 import { RootState } from './app/store';
 
@@ -10,6 +9,7 @@ import Form4 from './components/Form4'
 import Form5 from './components/Form5'
 
 function App() {
+
 
   const pagination = useSelector((state:RootState) => state.infoData.pagination)
 
@@ -31,8 +31,8 @@ function App() {
   }
 
   return (
-    <div className="App"> {/*@ts-ignore */}
-      <Background></Background>
+    <div className="App"> 
+      <Background />
       <Page></Page>
     </div>
   )

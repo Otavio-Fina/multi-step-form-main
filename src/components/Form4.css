@@ -35,6 +35,16 @@
 @media screen and (min-width: 1000px) {
   #body, #html {
     width: 100%;
+    height: 100%;
+    display: grid;
+  }
+  .App {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: fit-content;
   }
 }
 #container-price {
@@ -53,6 +63,11 @@
 #container-price .link-to-2 {
   text-decoration: underline;
   cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+#container-price .link-to-2:hover {
+  font-size: 17px;
+  color: hsl(243, 100%, 62%);
 }
 #container-price .plain-price {
   color: hsl(213, 96%, 18%);

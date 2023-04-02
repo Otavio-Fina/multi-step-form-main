@@ -16,3 +16,17 @@ div {
         color: aqua;
     }
 }
+
+#links { /* a div dos links dos css's */
+    display: none;
+  }
+
+@media screen and (min-width: 1000px) {
+    main {
+        display: flex;
+
+        div {
+            margin-top: -50px;
+        }
+    }
+}

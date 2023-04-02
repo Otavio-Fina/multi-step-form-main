@@ -36,6 +36,16 @@
 @media screen and (min-width: 1000px) {
   #body, #html {
     width: 100%;
+    height: 100%;
+    display: grid;
+  }
+  .App {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: fit-content;
   }
 }
 button.btn-plain {
@@ -128,6 +138,41 @@ button.btn-goback {
 button.btn-goback:hover {
   background-color: #e6e6e6; /* nova função bem legal que eu n sabia q existia   */
   color: hsl(231, 11%, 63%);
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    width: 600px;
+  }
+  button.btn-plain {
+    width: 150px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 15px;
+    justify-content: space-around;
+  }
+  button.btn-plain img {
+    margin-right: 0;
+  }
+  button.btn-plain div {
+    text-align: center;
+  }
+  form.form-flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  div#switch-container {
+    width: 510px;
+    margin-top: 0;
+    padding: 5px;
+  }
+  button.btn-goback {
+    margin: 15px !important;
+  }
 }
 
 /*# sourceMappingURL=Form2.css.map */

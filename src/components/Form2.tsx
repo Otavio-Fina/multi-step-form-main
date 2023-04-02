@@ -1,6 +1,7 @@
-import { useDispatch } from 'react-redux'; 
-import { getPlain, getPlainStyle, getPagination } from '../features/info-forms/infoForms';
-import { useState } from 'react';
+import { useSelector ,useDispatch } from 'react-redux'; 
+import { getPlain, getPlainStyle, getPagination, getFocusedPlain } from '../features/info-forms/infoForms';
+import { useState, useEffect } from 'react';
+import { RootState } from '../app/store';
 
 
 
@@ -10,9 +11,11 @@ function Form2() {
 
     const dispatch = useDispatch(); 
 
-    const [switchPlain, setSwitchPlain] = useState(true) //* true == monthly, false == yearly
+    const infoData = useSelector((state:RootState) => state.infoData);
 
-    const [focusedButton, setFocusedButton] = useState(0); 
+    const [switchPlain, setSwitchPlain] = useState(infoData.styleOfPlain) //* true == monthly, false == yearly
+
+    const [focusedButton, setFocusedButton] = useState(infoData.focusedPlain); 
 
 
     function HandleChosePlainClick(e:any, plainAtt:string) {
@@ -20,6 +23,24 @@ function Form2() {
 
         dispatch(getPlain(plainAtt));
     }
+
+
+    //? o código a seguir garante que quando você saia do componente e volte, o switch esteja correto de acordo com o plano.
+    //? o useEffect é usado para dar tempo de renderizar os elementos e não voltar um elemento `undefined`.
+
+    useEffect(() => {
+      
+        if (switchPlain) { //@ts-ignore
+            document.getElementById('switch-plain').style.justifyContent = "flex-start";//@ts-ignore
+            document.getElementById('switch-yearly').className = ''//@ts-ignore
+            document.getElementById('switch-monthly').className = 'active-span-switch'//@ts-ignore
+        } else { //@ts-ignore
+            document.getElementById('switch-plain').style.justifyContent = "flex-end";//@ts-ignore
+            document.getElementById('switch-monthly').className = ''//@ts-ignore
+            document.getElementById('switch-yearly').className = 'active-span-switch'//@ts-ignore
+        }
+    }, []) 
+    
 
     function HandleSwitchPlainClick(e:Event) {
         e.preventDefault();
@@ -49,6 +70,7 @@ function Form2() {
 
     const handleButtonFocus = (index: number) => {
         setFocusedButton(index);
+        dispatch(getFocusedPlain(index))
     }
 
     
@@ -57,7 +79,7 @@ function Form2() {
             <div>
                 <h3>Select your plan</h3>
                 <p>You have the option of monthly or yearly billing.</p>
-                <form>
+                <form className='form-flex'>
                     <div className="form-group">
                         <button className={`btn-plain ${focusedButton === 0 ? 'focus' : ''}`} onClick={(e) => {HandleChosePlainClick(e, 'arcade'); handleButtonFocus(0);}}>
                             <img src="./src/assets/images/icon-arcade.svg" alt="" />
