@@ -63,7 +63,7 @@ O Usuário deve:
 - ![HTML](https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white)
 - ![CSS](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
 - ![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
-- ![SASS](https://github.com/shivamkapasia0/img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+- ![SASS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 - ![Flexbox](https://img.shields.io/badge/flexbox-100000?style=for-the-badge&logo=FLEXBOX&logoColor=white&labelColor=7FF106&color=7FF106)
 - ![Mobile-first workflow](https://img.shields.io/badge/MOBILE_FIRST_WORKFLOW-100000?style=for-the-badge&logo=&logoColor=white&labelColor=9E06EA&color=9E06EA)
 - ![Javascript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=JavaScript&logoColor=white)
